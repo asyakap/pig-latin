@@ -78,3 +78,15 @@ Code:
 const text = "play play";
 pigLatin(text);
 Expected Output: "ayplay ayplay";
+
+Test: "If the first and second letters of the word are "q" and "u", it should shift the first and the second letters in the end and add "ay"."
+Code:
+const text = "quark";
+pigLatin(text);
+Expected Output: "arkquay";
+
+Test: "If the word contains "qu", but it's not in the beginning of the word, previous rules should apply."
+Code:
+const text = "aqua";
+pigLatin(text);
+Expected Output: "aquaway";

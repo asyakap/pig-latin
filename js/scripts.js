@@ -13,9 +13,13 @@ function pigLating(text) {
         let subElement1 = subElement.join("");
         newArray.push(subElement1 + "way");
       }
-      else {
-        //first is not a vowel -> check if second one is vowel, if yes -> shift the first letter to the end and add "ay"
-        if (subElement[1] === "a" || subElement[1] === "e" || subElement[1] === "i" || subElement[1] === "o" || subElement[1] === "u") {
+      else if (subElement[0] === "q" && subElement[1] === "u") {
+          subElement.shift();
+          subElement.shift();
+          let subElement1 = subElement.join("");
+          newArray.push(subElement1 + "quay");
+        }
+        else if (subElement[1] === "a" || subElement[1] === "e" || subElement[1] === "i" || subElement[1] === "o" || subElement[1] === "u") {
           let fistLetter = subElement[0];
           subElement.shift();
           let subElement1 = subElement.join("");
@@ -31,7 +35,6 @@ function pigLating(text) {
           newArray.push(subElement1 + fistLetter + secondLetter + "ay");
          }
       }
-    }
     let newArray1 = newArray.join(" ");
     const header = document.createElement("h3");
     header.append("This is your sentence translated into Pig Latin:");
