@@ -14,6 +14,7 @@ _This webpage replaces text with its Pig Latin version._
 ## Setup/Installation Requirements
 
 * _You need a web browser_
+* _The project can be opened from the following link: https://asyakap.github.io/pig-latin/_
 
 
 ## Known Bugs
