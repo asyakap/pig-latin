@@ -79,6 +79,18 @@ const text = "play play";
 pigLatin(text);
 Expected Output: "ayplay ayplay";
 
+Test: "If the first three letters of the word are consonants, it should shift first three letters in the end and add "ay"."
+Code:
+const text = "three";
+pigLatin(text);
+Expected Output: "eethray";
+
+Test: "It should pass the previous test for multiple words in the sentence".
+Code:
+const text = "three three";
+pigLatin(text);
+Expected Output: "eethray eethray";
+
 Test: "If the first and second letters of the word are "q" and "u", it should shift the first and the second letters in the end and add "ay"."
 Code:
 const text = "quark";
